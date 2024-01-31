@@ -40,7 +40,7 @@ func main() {
 			// 	}
 			// 	chordData = append(chordData, cd2)
 			// }
-			for octave := 1; octave < 3; octave++ {
+			for octave := 1; octave < 4; octave++ {
 				cd2 := Chord{Name: name}
 				for i := 0; i < 4; i++ {
 					cd2.Notes[i] = int(cd.Notes[i]) + (12 * octave)
@@ -53,7 +53,7 @@ func main() {
 
 	chordToPlay := chordData[rand.Intn(len(chordData))]
 	for {
-		if chordToPlay.Notes[0] > 47 && chordToPlay.Notes[0] < 61 {
+		if chordToPlay.Notes[0] > 60 && chordToPlay.Notes[0] < 72 {
 			break
 		}
 		chordToPlay = chordData[rand.Intn(len(chordData))]
